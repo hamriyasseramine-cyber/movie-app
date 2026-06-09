@@ -1,0 +1,391 @@
+/* ─────────────────────────────────────────
+   Support.css  —  uses index.css variables
+───────────────────────────────────────── */
+
+.support-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+}
+
+/* ── HERO ──────────────────────────────── */
+.support-hero {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.support-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(192, 57, 43, 0.72) 0%,
+    rgba(26, 26, 26, 0.82) 100%
+  );
+}
+
+.support-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 640px;
+}
+
+.support-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  margin-bottom: 1.25rem;
+}
+
+.support-hero-content h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.support-hero-content p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ── INFO SECTION ───────────────────────── */
+.support-info {
+  padding: 4rem 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.support-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s,
+    transform 0.25s;
+}
+
+.info-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.info-card-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.info-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.info-card p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* ── DIVIDER ────────────────────────────── */
+.support-divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2.5rem;
+}
+
+.support-divider::before,
+.support-divider::after {
+  content: "";
+  flex: 1;
+  height: 1.5px;
+  background: var(--border);
+}
+
+.support-divider span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── FORM SECTION ───────────────────────── */
+.support-form-section {
+  padding: 3.5rem 2.5rem 5rem;
+  max-width: 780px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.support-form h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.support-form-sub {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin-bottom: 2.25rem;
+}
+
+.support-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.support-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.support-field--full {
+  margin-bottom: 1.75rem;
+}
+
+.support-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.support-field input,
+.support-field select,
+.support-field textarea {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.support-field input::placeholder,
+.support-field textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.support-field input:focus,
+.support-field select:focus,
+.support-field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+.support-field textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+.support-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.support-btn-submit {
+  padding: 0.9rem 2.2rem;
+  background-color: var(--accent);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(192, 57, 43, 0.25);
+  transition:
+    background-color 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+}
+
+.support-btn-submit:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0 6px 24px rgba(192, 57, 43, 0.35);
+}
+
+.support-btn-submit:active {
+  transform: scale(0.97);
+}
+
+/* ── SUCCESS STATE ──────────────────────── */
+.support-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  gap: 1rem;
+}
+
+.support-success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(192, 57, 43, 0.08);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.support-success h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.support-success p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 360px;
+  line-height: 1.65;
+}
+
+.support-btn-outline {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.8rem;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.support-btn-outline:hover {
+  background-color: rgba(192, 57, 43, 0.06);
+}
+
+/* ── FOOTER ─────────────────────────────── */
+.support-footer {
+  border-top: 1.5px solid var(--border);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background-color: var(--bg-subtle);
+  margin-top: auto;
+}
+
+/* ── CLICKABLE CARD ─────────────────────── */
+.info-card--clickable {
+  cursor: pointer;
+}
+
+.info-card--clickable:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.info-card-arrow {
+  color: var(--accent);
+  font-size: 0.95rem;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.info-card--clickable:hover .info-card-arrow {
+  transform: translateX(4px);
+}
+
+/* ── RESPONSIVE ─────────────────────────── */
+@media (max-width: 768px) {
+  .support-info {
+    padding: 3rem 1.25rem;
+  }
+
+  .support-divider {
+    padding: 0 1.25rem;
+  }
+
+  .support-form-section {
+    padding: 2.5rem 1.25rem 4rem;
+  }
+
+  .support-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .support-hero {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .support-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

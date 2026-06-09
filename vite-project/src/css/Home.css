@@ -1,0 +1,209 @@
+.home {
+  padding: 2.5rem 2.5rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── SEARCH ─────────────────────────────── */
+.search-form {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto 3rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 3rem 0.8rem 1.25rem;
+  border: 1.5px solid var(--border-input);
+  border-radius: var(--radius-pill);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.06);
+}
+
+.search-clear {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  transition: color 0.15s;
+}
+
+.search-clear:hover {
+  color: var(--text-primary);
+}
+
+/* ── RESULTS LABEL ──────────────────────── */
+.results-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* ── GRID ───────────────────────────────── */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ── SKELETON CARDS ─────────────────────── */
+.skeleton-card {
+  pointer-events: none;
+}
+
+.skeleton-text {
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-subtle) 25%,
+    var(--bg-muted) 50%,
+    var(--bg-subtle) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.sk-title-line {
+  height: 14px;
+  width: 80%;
+}
+
+.sk-year-line {
+  height: 12px;
+  width: 40%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ── LOADING / ERROR ────────────────────── */
+.loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 5rem 2rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.error-message {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── NO RESULTS ─────────────────────────── */
+.no-results {
+  text-align: center;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.no-results-icon {
+  font-size: 3rem;
+  opacity: 0.25;
+  margin-bottom: 0.5rem;
+}
+
+.no-results h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.no-results p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ── INFINITE SCROLL TRIGGER ────────────── */
+.scroll-trigger {
+  height: 60px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* ── SCROLL TO TOP ──────────────────────── */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 46px;
+  height: 46px;
+  background: var(--text-primary);
+  color: var(--bg-card);
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+  z-index: 99;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+/* ── RESPONSIVE ─────────────────────────── */
+@media (max-width: 640px) {
+  .home {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+  .search-form {
+    margin-bottom: 2rem;
+  }
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  .scroll-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
