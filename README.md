@@ -111,24 +111,11 @@ src/
 --
 ---
 
-## 📸 Screenshots
 
-| Home                          | Movie Detail                  | Classement                       |
-| ----------------------------- | ----------------------------- | -------------------------------- |
-| Search + infinite scroll grid | Full page with trailer & cast | Filters by genre, year, language |
 
----
 
-## 🤝 Contact
-
-**Hamri Yasser Amine**
 
 - GitHub: [@hamriyasseramine-cyber](https://github.com/hamriyasseramine-cyber)
 - LinkedIn: [yasser-amine-hamri](https://www.linkedin.com/in/yasser-amine-hamri/)
 - Email: hamriyasseramine@gmail.com
 
----
-
-## 📄 License
-
-MIT © 2025 Hamri Yasser Amine
