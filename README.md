@@ -10,17 +10,17 @@
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔍 **Real-time search** with 500ms debounce
-- ♾️ **Infinite scroll** — automatically loads more movies as you scroll
-- 🎬 **Movie detail page** — synopsis, cast, trailer (YouTube embed), similar movies
-- ⭐ **Favorites** — saved to localStorage via React Context
-- 🏆 **Classement** — filter by genre, year, language, sort by rating/popularity/votes
-- 🌙 **Dark mode** — toggle persisted across sessions
-- 📱 **Fully responsive** — mobile-first with burger menu
-- 💀 **Skeleton loaders** — smooth loading states for every card
-- 🎞️ **Page transitions** — powered by Framer Motion
+-  **Real-time search** with 500ms debounce
+-  **Infinite scroll** — automatically loads more movies as you scroll
+-  **Movie detail page** — synopsis, cast, trailer (YouTube embed), similar movies
+-  **Favorites** — saved to localStorage via React Context
+-  **Classement** — filter by genre, year, language, sort by rating/popularity/votes
+-  **Dark mode** — toggle persisted across sessions
+-  **Fully responsive** — mobile-first with burger menu
+-  **Skeleton loaders** — smooth loading states for every card
+-  **Page transitions** — powered by Framer Motion
 
 ---
 
@@ -39,7 +39,7 @@
 
 ---
 
-## 🚀 Getting Started
+##  
 
 ### Prerequisites
 
@@ -66,7 +66,7 @@ cp .env.example .env
 Create a `.env` file at the root:
 
 ```env
-VITE_API_KEY=your_tmdb_api_key_here
+VITE_API_KEY=your tmdb api key here
 ```
 
 ### Run locally
@@ -108,12 +108,7 @@ src/
 └── css/                     # One CSS file per component
 ```
 
----
-
-## 🌐 Live Demo
-
-> [movie-app-demo.vercel.app](https://movie-app-demo.vercel.app) _(replace with your Vercel link)_
-
+--
 ---
 
 ## 📸 Screenshots
